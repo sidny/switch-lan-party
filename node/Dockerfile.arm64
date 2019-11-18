@@ -1,7 +1,8 @@
 FROM arm64v8/node:8-alpine
 
-RUN npm config set registry http://registry.npm.taobao.org/ ;\
-    wget https://github.com/spacemeowx2/switch-lan-play/archive/master.zip -O /tmp/slp.zip; \
+#RUN npm config set registry http://registry.npm.taobao.org/ 
+
+RUN wget https://github.com/spacemeowx2/switch-lan-play/archive/master.zip -O /tmp/slp.zip; \
     cd /tmp ; unzip /tmp/slp.zip ; \
     cp -r switch-lan-play-master/server /app ; \
     rm -rf /tmp/* ; \
